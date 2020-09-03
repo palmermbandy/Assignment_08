@@ -116,7 +116,7 @@ class FileIO:
         """
         # Clear out existing data and load file data anew
         if table:
-        	table = []
+            table = []
 
         try:
             with open(file_name, 'rb') as obj_file:
@@ -125,8 +125,8 @@ class FileIO:
         except FileNotFoundError as e:
             print(f'No file named {file_name} was found.\n', e)
         except EOFError:
-        	table = []
-        	return table
+            table = []
+            return table
 
     # Code to process data to a file
     @staticmethod
@@ -304,11 +304,11 @@ class IO:
         print('======= The Current Inventory: =======')
         print('ID\tCD Title (by: Artist)\n')
         try:
-	        if table:
-		        for row in table:
-		            print('{}\t{} (by: {})'.format(*row.values()))
+            if table:
+                for row in table:
+                    print('{}\t{} (by: {})'.format(*row.values()))
         except Exception as e:
-        	print('Error: ', e)
+            print('Error: ', e)
         print('======================================')
         print()
 
